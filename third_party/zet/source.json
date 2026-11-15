@@ -1,0 +1,182 @@
+{
+  "repository": "https://github.com/marmolejo/zet",
+  "revision": "aaad74d51a4b558e48031df20d80f20e350cd771",
+  "license": "GPL-3.0-or-later",
+  "files": [
+    {
+      "path": "COPYING",
+      "git_blob": "94a9ed024d3859793618152ea559a168bbcbb5e2",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "README",
+      "git_blob": "a8bbb5be04bc0a1b9e2e014de99dc01973fcef14",
+      "sha256": "67c782e88df2709c79307932367425341fb26b30845f6775c83ad17d24624584"
+    },
+    {
+      "path": "cores/zet/bin/micro2rom",
+      "git_blob": "75fab8f8bbb1845c740cc2eaadc8facc1a7f3449",
+      "sha256": "3f6bc37aad607bc7048ae08ef65d16b27df9ab9e15ca00bab15f23d8e5691d67"
+    },
+    {
+      "path": "cores/zet/rtl/altera/microcode.txt",
+      "git_blob": "8669c361f185dd9a427e2f643cb5cc9a611b1b71",
+      "sha256": "997798b132a2cc3d42fe203ac4cf05650653b9ada36b45f49f452c0b9655b95c"
+    },
+    {
+      "path": "cores/zet/rtl/altera/zet_signmul17.v",
+      "git_blob": "c8f7980c40fb7a319386cbad9907a0a9b8988c89",
+      "sha256": "6ae31c04110924d0dfd34a603623c884111dfe762a7b1e948d702b864d735139"
+    },
+    {
+      "path": "cores/zet/rtl/defines.v",
+      "git_blob": "646c5920a661c40e810db6ee0e32de50d7e8c996",
+      "sha256": "847b4ac94710db202aef6135c7001aeeede6f67f92a4995f3d8d96eef5b0f8f9"
+    },
+    {
+      "path": "cores/zet/rtl/zet.v",
+      "git_blob": "03bbbf1ae0060ef0aeb55f23bae125596650eca9",
+      "sha256": "fee96339886727a613cc1f7af9218a4fac942aaf84a2a0d90f8c9bf577ba3957"
+    },
+    {
+      "path": "cores/zet/rtl/zet_addsub.v",
+      "git_blob": "381cd8192e8d37969365120d9c8872a7f43d04a0",
+      "sha256": "757327e354f81d6dc3e44c763bd4159f7259b7766fc008f04de94c4708a4bb7c"
+    },
+    {
+      "path": "cores/zet/rtl/zet_alu.v",
+      "git_blob": "d0c3a1147ae766f3192ac30a6e47fa76732ccb4f",
+      "sha256": "991916dcc4212c2fb5bd662882255f06dd04188389ec81e792e9afb77bbcfebe"
+    },
+    {
+      "path": "cores/zet/rtl/zet_arlog.v",
+      "git_blob": "87f5289407511be98fc2d09c9380a29bbf70becd",
+      "sha256": "38382df8ef3baa16646ad0d05cb81ab3ded9e0904da79d569e771392776158d4"
+    },
+    {
+      "path": "cores/zet/rtl/zet_bitlog.v",
+      "git_blob": "349305b96cc3e5bd0faaed3edc0b5c39b5d8503f",
+      "sha256": "af1446a6b1712356070231803cbab037cce9147c8eba48c8309e2b3fa782b120"
+    },
+    {
+      "path": "cores/zet/rtl/zet_conv.v",
+      "git_blob": "356ae290481be3cafa0b956c5640dfd7cd014ef7",
+      "sha256": "353695a887afcc7740d6b73cfc7beeb29593f6975a5ea72e97b2545854f39f2b"
+    },
+    {
+      "path": "cores/zet/rtl/zet_core.v",
+      "git_blob": "3d8771fb7d2135f58375a9b13732d84cad93d868",
+      "sha256": "eaf66d8ae66d3c1b1acf0ca2909986d02c1ef3a54c4a50c852efdaef9f4082ea"
+    },
+    {
+      "path": "cores/zet/rtl/zet_decode.v",
+      "git_blob": "485dd836aa3f4cfd022503ff9f2b5ab0ef6d8123",
+      "sha256": "56825843cfeaf43420e9e8195e36d6bb59a8eb3759ccb78501a7455cbba55265"
+    },
+    {
+      "path": "cores/zet/rtl/zet_div_su.v",
+      "git_blob": "ab6eeb5d5cfb0e4cf4ad0b46d13b1f4c8e9d75b0",
+      "sha256": "4599f1360eba017c2b59aa18b373be51c4877fde0a0cb7c58112007257f5b52e"
+    },
+    {
+      "path": "cores/zet/rtl/zet_div_uu.v",
+      "git_blob": "781dd64940c883d677ca922d066a2c362f800aa3",
+      "sha256": "f93d9196e204c2806ec5ebdeb51d3982763356f33c22b711bfaebc705148d9a6"
+    },
+    {
+      "path": "cores/zet/rtl/zet_exec.v",
+      "git_blob": "85b16440b27aff27175a72d4fa42cd5cfa19d24b",
+      "sha256": "df288aab2517a39d79659099756b983cd53dcdafe1a722b36746d5b2b1749dd4"
+    },
+    {
+      "path": "cores/zet/rtl/zet_fetch.v",
+      "git_blob": "730cc6de1c26991f356b37840c5330d3dda06e40",
+      "sha256": "4ef93723f06650b973b640c2b6abb45ad79282f91b47d01572042e8b4aca027d"
+    },
+    {
+      "path": "cores/zet/rtl/zet_fulladd16.v",
+      "git_blob": "3785ca348a2cc2defdbc486d3adb130513293a27",
+      "sha256": "8dc70f05d8f7f6366cb3d72d95296c78e7941ff1b08f13bb4143ca31577132d0"
+    },
+    {
+      "path": "cores/zet/rtl/zet_jmp_cond.v",
+      "git_blob": "4138914e70c5c74ba4eb151eafbe78015ab1764e",
+      "sha256": "9c8c1051cdccd4be5bb64da336458164b58b2a026937525ebf697a19a15ba260"
+    },
+    {
+      "path": "cores/zet/rtl/zet_memory_regs.v",
+      "git_blob": "1200aa78df60ea9d51f6c1e66854f8c91ef3ea98",
+      "sha256": "6aad293f28156198113f3267d2d5b3d65b06d1c2a7b3330f33b33b658abcbadb"
+    },
+    {
+      "path": "cores/zet/rtl/zet_micro_data.v",
+      "git_blob": "88e80281d9990ceeaaadd01baed95c20e1a06898",
+      "sha256": "a39bd61d94d436618b2061729b2676a174bdf01dc35210e89012e68bfe31c984"
+    },
+    {
+      "path": "cores/zet/rtl/zet_micro_rom.v",
+      "git_blob": "3167bc85c12d9c578367d261b4af2dd277d84e45",
+      "sha256": "b12216c4cca459f8377da4dacf27dfbf733b88f0a33342e7015572f3eb16609e"
+    },
+    {
+      "path": "cores/zet/rtl/zet_muldiv.v",
+      "git_blob": "37ab76d7c8a2e7a9fe9dc395aee6fa720dd1f681",
+      "sha256": "dee71e61e066846872df2f94160a34cc269a30fee1052819b7ba26d2a727802d"
+    },
+    {
+      "path": "cores/zet/rtl/zet_mux8_1.v",
+      "git_blob": "5ca2208ade71b03df91049a6124be6b8316dc675",
+      "sha256": "cdaf8d99398cbe5be3d0487c1af72e3e1bea7784deed45c05e832e85f86f2e69"
+    },
+    {
+      "path": "cores/zet/rtl/zet_mux8_16.v",
+      "git_blob": "629347c4851be5cebf48493220be9585a98e03b6",
+      "sha256": "c27a912606740bbe086688a5690ed9203dff5f88122dec19700355f55c8e4ceb"
+    },
+    {
+      "path": "cores/zet/rtl/zet_next_or_not.v",
+      "git_blob": "ee466d01a6e352856245f671ebeeb829ae43d40d",
+      "sha256": "47a8c717fd52028e01263e384eb624ed96af12c0954d6f24b0d14edba263e528"
+    },
+    {
+      "path": "cores/zet/rtl/zet_nstate.v",
+      "git_blob": "a58aa9b92b948385e8ca5647f42279264672efcf",
+      "sha256": "3eeab112a8fec223211ed456eb37d557582d7d5b81e6cf41bf30dd516ae8dd3a"
+    },
+    {
+      "path": "cores/zet/rtl/zet_opcode_deco.v",
+      "git_blob": "b67984684e74f107abbf07054c7505b921ce427a",
+      "sha256": "9bc4890b431825c3d11132783327ebddd5e4b8fcbd58e1145ffe90d115c26084"
+    },
+    {
+      "path": "cores/zet/rtl/zet_othop.v",
+      "git_blob": "25e1a79189199a43eba84111a0eef8245c0e49a6",
+      "sha256": "b69ade6ada6154dd28cd14c8b9815038e40873c0f84115fb16f096cd40aca63b"
+    },
+    {
+      "path": "cores/zet/rtl/zet_regfile.v",
+      "git_blob": "d424eaa9f77a06c5cd4517b9ee99a8e7cb82ac44",
+      "sha256": "9bf5b62a392e94da429bf89fa24720fc75e910aca2a4fda66bcf5506624c76d4"
+    },
+    {
+      "path": "cores/zet/rtl/zet_rxr16.v",
+      "git_blob": "97c750c51e487e332369243e715861144f667928",
+      "sha256": "53b873297fd6d07c7189a118b7c70dcf24277a33e0dc2d1c728441d4f78ace12"
+    },
+    {
+      "path": "cores/zet/rtl/zet_rxr8.v",
+      "git_blob": "e41cd12f52e534154c86707739d4088b72e16bae",
+      "sha256": "27b8f022e846ddc19efba5e35899f70314a2c6d43af7deec85eb2cb4da3c1ce4"
+    },
+    {
+      "path": "cores/zet/rtl/zet_shrot.v",
+      "git_blob": "ffdea82b55d5e83b20ec8f93c73e800e7f57aa89",
+      "sha256": "af86b3128ff411103a1d5c9f58605a7a8bd0d9b51c1f008e871a60dd3a8ff5c1"
+    },
+    {
+      "path": "cores/zet/rtl/zet_wb_master.v",
+      "git_blob": "40317b1986d281c605d51f81bb1ee8250118e5be",
+      "sha256": "461033eb3373027edb8f3c3971075b437cbeeacae3e32d8ff0aa7ed36a9cc915"
+    }
+  ]
+}

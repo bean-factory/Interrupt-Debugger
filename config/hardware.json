@@ -1,0 +1,4 @@
+{
+  "project_mode": "fpga_hosted_8086_8259",
+  "jtag_bridge": "127.0.0.1:9374"
+}

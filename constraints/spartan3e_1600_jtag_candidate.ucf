@@ -1,0 +1,52 @@
+# XC3S1600E-4-FG320, UG257 v1.1. Candidate; board revision/jumpers pending.
+# UG257 v1.1: onboard switches, BTN_NORTH, LEDs and write-only LCD.
+# USB-JTAG uses the dedicated JTAG pins and BSCAN_SPARTAN3, not GPIO wiring.
+NET "clk_50" LOC = "C9" | IOSTANDARD = LVCMOS33;
+NET "clk_50" TNM_NET = "clk_50_group";
+TIMESPEC "TS_clk_50" = PERIOD "clk_50_group" 20 ns HIGH 40%;
+NET "clk" TNM_NET = "system_clock_group";
+TIMESPEC "TS_system" = PERIOD "system_clock_group" 80 ns HIGH 50%;
+NET "reset_btn" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "busy_led" LOC = "A8" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW;
+NET "ready_led" LOC = "G9" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW;
+# board_switches = {SW3 arm, SW2 timing, SW1:SW0 condition}.
+NET "board_switches<3>" LOC = "N17" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "board_switches<2>" LOC = "H18" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "board_switches<1>" LOC = "L14" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "board_switches<0>" LOC = "L13" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "start_button" LOC = "V4" | IOSTANDARD = LVTTL | PULLDOWN;
+# 1600E LCD DB7:DB4 are T8/R8/P6/M16. SF_D11:SF_D8 connect
+# to the LOWER LCD nibble DB3:DB0, not the upper nibble used in 4-bit mode.
+# CE0 high disables StrataFlash defensively;
+# LCD RW is permanently low: the FPGA never reads the LCD's 5 V output bus.
+NET "lcd_data<0>" LOC = "M16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<1>" LOC = "P6" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<2>" LOC = "R8" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<3>" LOC = "T8" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_enable" LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_rs" LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_rw" LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_return" LOC = "E3" | IOSTANDARD = SSTL2_I;
+NET "flash_disable" LOC = "D16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+# The DCM derives CLKDV=12.5 MHz; ISE propagates the input PERIOD constraint.
+# Bridge is limited to 1.5 MHz TCK. These constraints allow up to 3 MHz.
+NET "drck_control" TNM_NET = "jtag_control_group";
+NET "drck_data" TNM_NET = "jtag_data_group";
+NET "update" TNM_NET = "jtag_update_group";
+TIMESPEC "TS_jtag_control" = PERIOD "jtag_control_group" 333.333 ns HIGH 50%;
+TIMESPEC "TS_jtag_data" = PERIOD "jtag_data_group" 333.333 ns HIGH 50%;
+TIMESPEC "TS_jtag_update" = PERIOD "jtag_update_group" 333.333 ns HIGH 50%;
+# Only first CDC stages are excepted. Stage-to-stage/internal paths stay timed.
+INST "system/link/command_meta*" TNM = "command_first_stage";
+INST "system/link/toggle_meta*" TNM = "command_first_stage";
+INST "system/link/status_meta*" TNM = "status_first_stage";
+TIMESPEC "TS_async_command" = FROM "jtag_update_group" TO "command_first_stage" TIG;
+TIMESPEC "TS_async_status" = FROM "system_clock_group" TO "status_first_stage" TIG;
+# Packet flags are held throughout the frozen/readout phase. USER2 Capture-DR
+# happens only after the host observes frozen status through the USER1 handshake.
+INST "system/link/flags_latched*" TNM = "frozen_flags";
+TIMESPEC "TS_frozen_flags" = FROM "system_clock_group" TO "frozen_flags" TIG;
+# Extended USER1 diagnostics are captured only after frozen status is observed.
+# The snapshot source is held until explicit R/reset, just like frozen flags.
+INST "system/diagnostics*" TNM = "frozen_diagnostics";
+TIMESPEC "TS_frozen_diagnostics" = FROM "frozen_diagnostics" TO "jtag_control_group" TIG;

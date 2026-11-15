@@ -1,0 +1,57 @@
+{
+  "repository": "https://github.com/kitune-san/KF8259",
+  "revision": "b432853d7bdbe1d6dcae17f97c415e6140700131",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "HDL/KF8259.sdc",
+      "git_blob": "984ada9135c5dc8a9b50e97cf6a033f1ac7a1fb7",
+      "sha256": "caa7b18e3e5275a89d39c76b969b975d134fed282eacd7ce42f066a9eed963be"
+    },
+    {
+      "path": "HDL/KF8259.sv",
+      "git_blob": "c1b8da0f199e0ab24e5f2f090c4a4be3bbd1bbba",
+      "sha256": "c5ee6e8ce7223204745370af7007541083da10e88974a3d3804c999914896f03"
+    },
+    {
+      "path": "HDL/KF8259_Bus_Control_Logic.sv",
+      "git_blob": "bc3113c835f04cb943742dd555a7a27f7e9a2c01",
+      "sha256": "74a624a7542490bad058cf1023ad057f741cdf76a1e2128be0cdb2cdbb434027"
+    },
+    {
+      "path": "HDL/KF8259_Common_Package.svh",
+      "git_blob": "8b004a1247f91172ce6212548d7f8a2a4a20dadd",
+      "sha256": "bb75b6998dce9138725c5fcc3a00811eae1950a30708c875584225195031b005"
+    },
+    {
+      "path": "HDL/KF8259_Control_Logic.sv",
+      "git_blob": "d7e35cf4e50bc5a53fd06ff87997adad1a6d5119",
+      "sha256": "4010f70c62dbcceeffc85d8881118f6e183aeb1ad6ee69a540ec822228ce2dad"
+    },
+    {
+      "path": "HDL/KF8259_In_Service.sv",
+      "git_blob": "aafc340afd46cfeb311298e074d8e12f19be0d99",
+      "sha256": "a9dfb9feaf2bf3f2451de042f1b51fdf283a84cf54cac0cb0962910e4f659056"
+    },
+    {
+      "path": "HDL/KF8259_Interrupt_Request.sv",
+      "git_blob": "de6b3a232a04361a9db65755edf0736ccaa1c779",
+      "sha256": "9d13c756733fa899c4ab3b40aec2c3f4c61468c7990362920b4ae9babb39224c"
+    },
+    {
+      "path": "HDL/KF8259_Priority_Resolver.sv",
+      "git_blob": "2283d56a666504031e6eafcd6be166853a5d5dd7",
+      "sha256": "25e38c4c84a697a4a1adfc7151179074cf50df796d47e8dcfc5c6096fc1296da"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "4090cadabf61370a85319c7e16515e7739782a2f",
+      "sha256": "feeb1264c8ea426ed6815c4830ba8b12947d6e8090062f334cb651f8b3860ae6"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "fb3779778fa6b0b5cfb5db48ff0e7a3263050baf",
+      "sha256": "da15d6eaeb2478070a71e670d255d00d325834e4b111fb06a89c4d9eb03a7dea"
+    }
+  ]
+}

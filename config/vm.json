@@ -1,0 +1,5 @@
+{
+  "host": "192.168.56.102",
+  "user": "ise",
+  "ise_root": "/opt/Xilinx/14.7/ISE_DS/ISE"
+}
